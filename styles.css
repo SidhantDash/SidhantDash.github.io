@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(Fonts/Montserrat-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(Fonts/Montserrat-Thin.otf);
+}
+
+body {
+    background-color: #13151d;
+    color: white;
+    text-align: center;
+    /*
+    background-image: url("Images/UnevenWavyBackground.png"),
+        linear-gradient(#13151d 0%, #13151d 60%, #000000 130%);
+    */
+    background-image: url("images/Background.png");
+    background-attachment: fixed;
+    
+    /* background-image: ; 13151d*/
+}
+
+.main-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    letter-spacing: 0px;
+    text-shadow: 0px 4px 0px rgb(109, 109, 109),
+    0px 0px 20px rgba(255, 255, 255, 0.75);
+    margin: 75px auto 0px;
+}
+
+h3 {
+    font-family: Montserrat-Light;
+    margin: 40px auto;
+}
+
+/*
+.logo {
+    display: block;
+    margin: 50px auto;
+    max-width: 245px;
+    max-height: 245px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+}
+*/
+
+.main-logo {
+    display:inline-block;
+    margin: 50px 0px;
+    width: 245px;
+    height: 245px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+    background-image: url("Images/LogoSD.png");
+    background-size: cover;
+    transition: background-image 0.5s;
+    color: rgba(255, 255, 255, 0);
+    font-size: 10px;
+}
+
+.main-logo:hover {
+    background-image: url("Images/LogoSDInformation.png");
+    color: rgba(255, 255, 255, 0);
+}
+
+.indicator {
+    height: 100px;
+    width: 100px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.main-button {
+    margin: 0.5% auto 0.5% auto;
+    display: flex;
+    width: 400px; 
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    transition: all 0.3s;
+}
+.main-button:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: scale(0.90);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.main-button:active {
+    border-color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: all 0.0s;
+}
+
+.socials {
+    margin: 2.5% auto 2.5% auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.socials img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 10px;
+}
+
+.social {
+    display:inline-block;
+    transition: all 0.3s;
+}
+.social:hover {
+    transform: translateY(-8px);
+}
+.social img:hover {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+}
+
+.main-gallery ul {
+    display: flex;
+    background-color: black;
+    width: 75vw;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+}
+
+.main-gallery li {
+    height: 350px;
+    flex-grow: 1;
+    list-style-type: none;
+}
+.main-gallery img {
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    transform-origin: center;
+    margin: auto;
+}
+
+.main-gallery img:hover {
+    /* transform:scale(1.05,1.05); */
+    transform:translateY(5%);
+    max-height: 90%;
+    filter: brightness(1.5);
+    cursor: pointer;
+}
+
+.main-projects {
+    display: flex;
+    max-width: 75vw;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project {
+    display: flex; 
+    width: 75vw;
+    height: 500px;
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+}
+
+.project-image {
+    display: flex;
+    width: 60%;
+    height: 400px;
+    margin: 50px 0px 50px 50px;
+    gap: 10px;
+}
+
+.project-image img {
+    border-radius: 15px;
+}
+#game-search-img1 {
+    width: 50%;
+}
+
+#game-search-img-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+#game-search-img-container img {
+    object-fit: cover;
+    object-position: 0%;
+    height: 100%;
+    max-height: 200px;
+}
+
+#chase-the-fun-img-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+#chase-the-fun-img-container img {
+    width: 100%;
+}
+
+#chase-the-fun-img1 {
+    max-height: 300px;
+}
+
+#chase-the-fun-img2 {
+    max-height: 100px;
+}
+
+.project-info {
+    width: 40%;
+    height: 400px;
+    margin: 50px 50px 0px 50px;
+}
+
+.project-title {
+    font-size: 40px;
+    text-shadow: 0px 4px 0px rgb(109, 109, 109),
+    0px 0px 20px rgba(255, 255, 255, 0.75);
+    margin: 10px;
+    text-align: left;
+}
+
+.project-info ul {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.project-description {
+    font-size: 15px;
+    margin: 15px;
+    text-align: left;
+}
+
+.project a {
+    color: rgb(76, 76, 255);
+}
+
+.project a:hover {
+    text-decoration: underline;
+    color: rgb(164, 164, 255) !important;
+}
+
+.project a:visited {
+    color: rgb(76, 76, 255);
+}
+
+.project a:active {
+    color: rgb(255, 255, 255) !important;
+}
